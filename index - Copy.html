@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mừng sinh nhật em</title>
+  <link rel="stylesheet" href="canvas.css">
+  <link rel="stylesheet" href="present.css">
+  <link rel="stylesheet" href="card.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="BirthdayCake.png" type="image/x-icon">
+  <script src="jquery.js"></script>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    height: 100vh;
+    width: 100vw;
+    background: #18191f;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #facebook {
+    font-size: 1.5cm; /* Kích thước biểu tượng */
+    background-color: #4267B2; /* Màu sắc nền của biểu tượng Facebook */
+    color: #fff;
+    border-radius: 50%; /* Biểu tượng hình tròn */
+    padding: 0.2cm; /* Điều chỉnh độ dày viền */
+    margin: 0 20px;
+    animation: animate 3s linear infinite;
+    transform-origin: center; /* Đặt điểm xoay tại trung tâm */
+  }
+
+  #facebook:hover {
+    animation: rotate 1s infinite linear; /* Hiệu ứng chuyển động khi hover */
+  }
+
+  @keyframes animate {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg); /* Góc xoay ban đầu */
+    }
+    100% {
+      transform: rotate(360deg); /* Góc xoay khi kết thúc */
+    }
+  }
+
+  .fixed-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .circular-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 1.5cm;
+  height: 1.5cm;
+  background-color: #4267B2; /* Màu sắc nền của biểu tượng Facebook */
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.circular-icon:hover {
+  transform: rotate(360deg);
+}
+
+</style>
+
+<body>
+  <div class="parent">
+    <canvas id="canvas"></canvas>
+    <section class="above-fold">
+      <div class="wrap-present">
+        <div class="present-box" id="present">
+          <div class="present">
+            <div class="img-wrap" id="present-image"></div>
+          </div>
+          <div class="side front"></div>
+          <div class="side back"></div>
+          <div class="side left"></div>
+          <div class="side right"></div>
+          <div class="side top">
+            <span class="to">
+              <span class="name" id="nametag"></span>
+            </span>
+          </div>
+          <div class="side bottom"></div>
+        </div>
+      </div>
+      <p class="info-text">Click to Open</p>
+    </section>
+
+    <div id="card">
+      <h4 class="title-card">💘little coder💘</h4>
+
+      <img src="DH1.png" class="honey" />
+
+      <h4 class="content-card"></h4>
+    </div>
+  </div>
+
+  <audio autoplay loop id="playAudio">
+    <source src="https://ia902603.us.archive.org/23/items/happy-birthday-instrumental/HAPPY%20BIRTHDAY%20INSTRUMENTAL.mp3">
+  </audio>
+
+  <a href="https://www.facebook.com/Th.Hoanggg" class="fixed-icon">
+    <i class="fa fa-facebook-square circular-icon" id="facebook"></i>
+  </a>
+</body>
+
+<script src="config.js"></script>
+<script src="canvas.js"></script>
+<script src="present.js"></script>
+<script>
+  
+</script>
+
+</html>
